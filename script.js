@@ -12,21 +12,21 @@ $('#currentDay').text(today.format('dddd, MMMM, D'));
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
 
-//$(".example").addClass("myClass").removeClass("example");
+$(".example").addClass("myClass").removeClass("example");
 
 $('.time-block').each(function(){
 
 var presentHour = dayjs().hour();
 var colorBlk = $(this).attr('id')
 
-//console.log(presentHour)
-//console.log(colorBlk)
+// console.log(presentHour)
+// console.log(colorBlk)
   //this??
     if (colorBlk == presentHour) $(this).addClass("present").removeClass("future").removeClass("past")
 
     if (colorBlk > presentHour) $(this).addClass("future").removeClass("past").removeClass("present")
 
-    if(colorBlk < presentHour) $ (this).addClass("past").removeClass("present").removeClass("future")
+    if (colorBlk < presentHour) $ (this).addClass("past").removeClass("present").removeClass("future")
         
 
 });
@@ -39,14 +39,22 @@ var colorBlk = $(this).attr('id')
   // time-block containing the button that was clicked? How might the id be
   // useful when saving the description in local storage?
 
-// var buttonEl = $('button');
+var buttonEl = $('.saveBtn');
 
-// buttonEl.on('click', function () {
-//   var key = "the time"
-//   var value = "element text"
+
+  $(buttonEl).click(function () {
+    
+    var key = $(this).parent().attr('id')
+    var input = $(this).siblings('.description').val()
+    
+    localStorage.setItem(key, input);
+    
   
-//   localStorage.setItem('key', 'value');})
- 
+    console.log(key, input)
+
+
+})
+
   
   
   //
@@ -54,7 +62,15 @@ var colorBlk = $(this).attr('id')
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
 
-  
+  // $('.description').each(function(){
+
+  // var block = $(this).parent().attr('id')
+
+  // var stored = localStorage.getItem();
+
+
+  // });
+
   //
   // TODO: Add code to display the current date in the header of the page.
 });
