@@ -22,11 +22,11 @@ var colorBlk = $(this).attr('id')
 //console.log(presentHour)
 //console.log(colorBlk)
   //this??
-    if (colorBlk === presentHour) $('.time-block').addClass("present").removeClass("future").removeClass("past")
+    if (colorBlk == presentHour) $(this).addClass("present").removeClass("future").removeClass("past")
 
-    if (colorBlk > presentHour) $(".time-block").addClass("future").removeClass("past").removeClass("present")
+    if (colorBlk > presentHour) $(this).addClass("future").removeClass("past").removeClass("present")
 
-    if (colorBlk < presentHour) $(".time-block").addClass("past").removeClass("present").removeClass("future")
+    if(colorBlk < presentHour) $ (this).addClass("past").removeClass("present").removeClass("future")
         
 
 });
@@ -42,8 +42,8 @@ var colorBlk = $(this).attr('id')
 // var buttonEl = $('button');
 
 // buttonEl.on('click', function () {
-//   var key = 
-//   var value = 
+//   var key = "the time"
+//   var value = "element text"
   
 //   localStorage.setItem('key', 'value');})
  
@@ -53,6 +53,8 @@ var colorBlk = $(this).attr('id')
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+
+  
   //
   // TODO: Add code to display the current date in the header of the page.
 });
