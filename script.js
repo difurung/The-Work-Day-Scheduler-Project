@@ -2,13 +2,11 @@
 
 $(function () {
 
+  //Sets the date in the header
   var today = dayjs();
 $('#currentDay').text(today.format('dddd, MMMM, D'));
 
-
-
-$(".example").addClass("myClass").removeClass("example");
-
+//This function changes the CSS class bases on the 0 - 23 hour clock in dayJS/
 $('.time-block').each(function(){
 
 var presentHour = dayjs().hour();
@@ -29,7 +27,7 @@ var buttonEl = $('.saveBtn');
 var key;
 var input;
 
-
+// This function eill save the user input after a click event
   $(buttonEl).click(function () {
     
     key = $(this).parent().attr('id')
@@ -39,24 +37,14 @@ var input;
 
 })
 
-    
+// This function will pull from local storage and render the saves user imput on the page.
   $('.description').each(function(){
-    
-    
-    
+        
     var block = $(this).parent().attr('id')
-    
     var stored = localStorage.getItem(block);
-
-
-    
-    console.log(stored);
-    
+  
     $(this).val(stored)
-    
-    
-    
-    
+        
   });
 
   

@@ -4,6 +4,7 @@
 
 - [Description](#description)
 - [Screenshot](#screenshot)
+- [Credits](#credits)
 - [Access](#access)
 - [License](#license)
 - [Questions](#questions)
@@ -16,6 +17,29 @@ This project was created to be a simple application that will work as a workday 
 ## Screenshot
 
 ![Screenshot of Application](./assets/SchedulerScreenshot.png)
+
+## Credits
+
+[Jon Bermudez](https://github.com/EvolanGIT)
+
+[Edwin Pietrowski](https://github.com/BogartDME)
+
+[Charles Beatty](https://github.com/beattycharles)
+
+### Document and Tutorial Links
+
+https://api.jquery.com/
+
+https://day.js.org/
+
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+
+https://www.w3schools.com/jsref/met_storage_getitem.asp
+
+https://www.youtube.com/watch?v=3nrLc_JOF7k
+
+https://www.youtube.com/watch?v=VlWsJHsVb-E
+
 ## Access
 
 [Github Repository](https://github.com/difurung/The-Work-Day-Scheduler-Project)
