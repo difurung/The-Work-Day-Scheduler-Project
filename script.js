@@ -1,6 +1,5 @@
-// Wrap all code that interacts with the DOM in a call to jQuery to ensure that
-// the code isn't run until the browser has finished rendering all the elements
-// in the html.
+
+
 $(function () {
 
   var today = dayjs();
@@ -40,17 +39,19 @@ var colorBlk = $(this).attr('id')
   // useful when saving the description in local storage?
 
 var buttonEl = $('.saveBtn');
+var key;
+var input;
 
 
   $(buttonEl).click(function () {
     
-    var key = $(this).parent().attr('id')
-    var input = $(this).siblings('.description').val()
+    key = $(this).parent().attr('id')
+    input = $(this).siblings('.description').val()
     
     localStorage.setItem(key, input);
     
   
-    console.log(key, input)
+    // console.log(key, input)
 
 
 })
@@ -61,15 +62,25 @@ var buttonEl = $('.saveBtn');
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
+  
+  
+  $('.description').each(function(){
+    
+    
 
-  // $('.description').each(function(){
+    var block = $(this).parent().attr('id')
 
-  // var block = $(this).parent().attr('id')
+    var stored = $(localStorage.getItem('key'));
 
-  // var stored = localStorage.getItem();
+    
+    console.log(stored);
+
+  // $(this)  
+
+  // if local storage === value {attach block + stored}
 
 
-  // });
+  });
 
   //
   // TODO: Add code to display the current date in the header of the page.
