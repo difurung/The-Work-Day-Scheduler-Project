@@ -67,19 +67,20 @@ var input;
   $('.description').each(function(){
     
     
-
+    
     var block = $(this).parent().attr('id')
+    
+    var stored = localStorage.getItem(block);
 
-    var stored = $(localStorage.getItem('key'));
 
     
     console.log(stored);
-
-  // $(this)  
-
-  // if local storage === value {attach block + stored}
-
-
+    
+    $(this).val(stored)
+    
+    // if local storage === value {attach block + stored}
+    
+    
   });
 
   //
